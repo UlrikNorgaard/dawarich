@@ -58,8 +58,8 @@ services:
       - dawarich_db_data:/dawarich_db_data
     networks:
       - dawarich
-    ports:
-      - "${DAWARICH_APP_PORT:-3000}:3000"
+    expose:
+      - "3000"
     stdin_open: true
     tty: true
     entrypoint: web-entrypoint.sh
